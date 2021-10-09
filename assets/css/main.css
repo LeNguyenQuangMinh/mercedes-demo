@@ -1289,7 +1289,8 @@ hr {
   position: relative;
   padding-top: calc(100% / 3);
   width: 100%;
-  background: url("./assets/img/about-header.jpeg") center/cover no-repeat;
+  background: url("https://bitly.com.vn/7snm81") center / cover
+            no-repeat;
 }
 
 .about-header__text {
@@ -1478,11 +1479,13 @@ hr {
 }
 
 .about-body__history.first {
-  background: url(./assets/img/about-history1.webp) center/cover no-repeat;
+  background: url(https://bitly.com.vn/ag8plq) center / cover
+                no-repeat;
 }
 
 .about-body__history.second {
-  background: url(./assets/img/about-history2.webp) center/cover no-repeat;
+   background: url(https://bom.to/c4YuPn) center / cover
+                no-repeat;
 }
 
 .about-body__history.second .about-body__history--wrap {
@@ -1490,7 +1493,8 @@ hr {
 }
 
 .about-body__history.third {
-  background: url(./assets/img/about-history3.webp) center/cover no-repeat;
+  background: url(https://bom.to/6u2BFE) center / cover
+                no-repeat;
 }
 
 .about-body__slider {
