@@ -215,6 +215,12 @@
     .calendar__weekdays div {
         font-size: 1.6rem;
     }
+    
+    /* ---------Account----- */
+    .account-page__buybtn {
+        width: 100%;
+        border-radius: 0;
+    }
 }
 
 /* For Mobile low resolution */
