@@ -40,19 +40,19 @@ let merAMGs = [
 
 let merLimiteds = [
     {
-        img: "/assets/img/product1-1.jpg",
+        img: "./assets/img/product1-1.jpg",
         name: "S450 Limited Edition 2021",
     },
     {
-        img: "/assets/img/product2-1.jpg",
+        img: "./assets/img/product2-1.jpg",
         name: "MERCEDES-MAYBACH S650 4MATIC",
     },
     {
-        img: "/assets/img/product3-1.jpg",
+        img: "./assets/img/product3-1.jpg",
         name: "Mercedes-AMG G 63",
     },
     {
-        img: "/assets/img/product4-1.jpg",
+        img: "./assets/img/product4-1.jpg",
         name: "Mercedes-AMG GT R",
     },
 ];
