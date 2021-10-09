@@ -1,0 +1,377 @@
+/* ----------------------------Mobile ----------------------------*/
+@media (max-width: 739px) {
+    .header-about__wrap-text {
+        margin: 20px;
+    }
+
+    .header-about__view-btn {
+        display: block;
+        text-align: center;
+    }
+
+    .products {
+        margin-top: -60px;
+    }
+
+    .product__info {
+        margin: 10px 0 30px;
+        height: unset;
+    }
+
+    .product__heading {
+        margin: 60px auto;
+    }
+
+    .product__information--wrap {
+        justify-content: center;
+    }
+    /* 
+    .product__info--wrap-img {
+        min-height: none;
+    } */
+
+    /* .product-info__img {
+        min-height: 140px;
+        object-fit: contain;
+    } */
+
+    .product-information__img {
+        margin-top: 8px;
+        max-width: 250px;
+    }
+
+    .offer__heading,
+    .offer__desc {
+        color: #fff;
+    }
+
+    .offer__info {
+        padding: 0 20px;
+    }
+
+    .offer__img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .offer__buy {
+        margin: 30px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .footer__about {
+        margin-left: 32px;
+    }
+
+    .footer__logo {
+        margin-left: 50%;
+    }
+
+    .footer__wrap {
+        padding: 0 20px;
+    }
+
+    .footer__wrap .col:nth-child(1) {
+        padding-left: 20px;
+    }
+
+    .footer__menu {
+        margin-left: 20%;
+    }
+
+    /* mobile type list */
+    .nav-type__list {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        flex-direction: column;
+        left: -152px;
+        overflow: unset;
+        top: 20px;
+        transition: left 0.5s;
+        z-index: 1;
+    }
+
+    .nav-type__list.sticky {
+        top: 20%;
+    }
+
+    .nav-type__text {
+        display: none;
+    }
+
+    .nav-type__item {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .nav-type__link.check {
+        width: 100%;
+    }
+
+    .nav-type__menu-btn {
+        display: block;
+    }
+
+    /* About Page */
+
+    .about-header__text h3 {
+        font-size: 2.8rem;
+    }
+
+    .about-header__text {
+        top: 4px;
+    }
+
+    .grid.wide.about__body {
+        padding: 0 20px;
+    }
+
+    .about-body__heading-header {
+        font-size: 1.6rem;
+    }
+
+    .about-body__heading-title {
+        font-size: 2rem;
+    }
+
+    .about-body__heading-desc {
+        font-size: 1.4rem;
+    }
+
+    .about-body-navigation__list {
+        flex-direction: column;
+    }
+
+    .about-body-navigation__list .about-body-navigation__item {
+        border-left: 1px solid #444f58;
+    }
+
+    .about-body-navigation__list .about-body-navigation__item.active {
+        border-left: 1px solid #fff;
+    }
+
+    .about-body__blog-left {
+        margin-bottom: 12px;
+    }
+
+    .about-body__history--wrap {
+        top: 0;
+    }
+    .about-body__history-title {
+        font-size: 3rem;
+    }
+    .about-body__history-desc {
+        margin-left: 0;
+        font-size: 1.6rem;
+    }
+
+    .about-body__history.second .about-body__history--wrap {
+        left: 12%;
+    }
+
+    .about-body__heading {
+        margin: 36px auto;
+    }
+
+    .about-body__footnote {
+        margin-top: 2.4rem;
+    }
+
+    .about-body__slider-icon {
+        display: none;
+    }
+
+    .about-body__slider {
+        flex-direction: column;
+    }
+    .about-body__slider--wrap.row {
+        display: unset;
+    }
+    .about-body__slide {
+        margin-bottom: 32px;
+    }
+
+    .about-body__slide-title {
+        margin: 4px 0;
+    }
+
+    .footer__container#footerContainer {
+        margin-top: 40px;
+    }
+
+    /* ---------Calendar in contact------- */
+    .contact__form.booking {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .calendar__date h1 {
+        font-size: 2rem;
+    }
+
+    .calendar__date p {
+        font-size: 1.5rem;
+    }
+    .calendar__weekdays div {
+        font-size: 1.6rem;
+    }
+}
+
+/* For Mobile low resolution */
+
+@media screen and (max-width: 374px) {
+    .footer__about {
+        margin-left: 18px;
+    }
+
+    .footer__wrap .col:nth-child(2),
+    .footer__wrap .col:nth-child(3) {
+        max-width: 150px;
+    }
+}
+
+/* For tablet low resolution*/
+
+@media screen and (max-width: 890px) {
+    .header-nav__icon.bar-mobile {
+        display: block;
+        position: absolute;
+        right: 2rem;
+    }
+
+    .header-nav__icon.cart-mobile {
+        display: none;
+    }
+
+    .header-nav__list {
+        flex-direction: column;
+        float: left;
+        background-color: #444f58;
+        position: absolute;
+        z-index: 9999;
+        right: 0px;
+        left: 0px;
+        top: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    .header-nav__item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: block;
+    }
+
+    .header-nav__item a {
+        float: right;
+        color: #b7bec2;
+        padding: 12px 20px;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    .header-nav__item a::after {
+        display: none;
+    }
+}
+
+/* ----------------------------Mobile & Tablet ----------------------------*/
+@media (max-width: 1023px) {
+    .offer__info {
+        margin-bottom: 24px;
+    }
+
+    .testimonial__wrap {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .footer__wrap .col:nth-child(1) {
+        flex: unset;
+    }
+
+    .footer__wrap .col:nth-child(4) {
+        padding-left: 40px;
+    }
+    .nav-type__item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/*----------------------------Tablet---------------------------- */
+
+@media (max-width: 1023px) and (min-width: 740px) {
+    .header__nav {
+        padding: 20px 0;
+    }
+    .nav-type__list.sticky {
+        width: 100%;
+        max-width: 644px;
+    }
+
+    .nav-type__list {
+        width: 100%;
+    }
+
+    .nav-type__link.check {
+        line-height: 2.2rem;
+    }
+
+    .nav-type__link {
+        padding: 10px 20px;
+        max-width: calc(644px / 6);
+    }
+
+    .nav-type__link.mercedes-amg,
+    .nav-type__link.mercedes-maybach {
+        padding: 0px;
+    }
+
+    /* .nav-type__link.mercedes-eq {
+        /* padding: 9px 8px 10px; */
+    /* } */
+
+    .product__info:nth-child(1),
+    .product__info:nth-child(2) {
+        margin-bottom: 60px;
+    }
+}
+
+/* ----------------------------Tablet & PC Low resolution---------------------------- */
+@media (max-width: 1239px) {
+    .offer__heading,
+    .offer__desc {
+        color: #fff;
+    }
+
+    .offer__buy {
+        display: block;
+        text-align: center;
+    }
+    .header-nav-logo__img {
+        width: 132px;
+    }
+}
+
+/* ----------------------------- > PC low resolution ----------------------------*/
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .header-about-color__navigation {
+        left: 12px;
+    }
+
+    .offer__img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer__info {
+        padding: 32px;
+        margin-left: 20px;
+    }
+    .product__info--wrap-img {
+        min-height: 170px;
+    }
+}

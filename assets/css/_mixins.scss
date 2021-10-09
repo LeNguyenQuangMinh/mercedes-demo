@@ -1,0 +1,19 @@
+@mixin button {
+    display: inline-block;
+    color: $whiteColor;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    padding: 12px 28px;
+    border: none;
+    text-decoration: none;
+    background-color: $bluePrimary;
+    cursor: pointer;
+    &:hover {
+        background-color: $greyPrimary;
+        color: $bluePrimary;
+
+        a {
+            color: $bluePrimary;
+        }
+    }
+}

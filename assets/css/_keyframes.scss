@@ -1,0 +1,60 @@
+// For feature when hover info
+@keyframes showDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+// moving animation footer
+@keyframes moving {
+    from {
+        left: -10px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+// sliders left for products
+@keyframes slideLeft {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+
+        opacity: 1;
+    }
+}
+
+// Slide for abotu page content
+
+@keyframes toLeft {
+    from {
+        transform: translateX(-1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toRight {
+    from {
+        transform: translateX(1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

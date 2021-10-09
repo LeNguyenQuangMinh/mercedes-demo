@@ -1,0 +1,109 @@
+.products.detail {
+    margin-bottom: 8rem;
+}
+.product {
+    &-detail {
+        &__img {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+
+            &--big {
+                width: 100%;
+                background-color: #f1f1f1;
+                margin-bottom: 8px;
+            }
+            &--big img {
+                width: 100%;
+            }
+
+            &--small {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &--small img {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        &-small__item {
+            background-color: #f1f1f1;
+            flex-basis: 24%;
+        }
+    }
+
+    &__detail {
+        margin: $mg60 0;
+
+        .wrap__info {
+            padding: 20px;
+
+            p {
+                color: #555;
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 5rem;
+                line-height: 6rem;
+                margin: 25px 0;
+            }
+
+            h4 {
+                margin: 20px 0;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            select {
+                display: block;
+                padding: 10px;
+                margin-top: 20px;
+                outline: none;
+                border: 1px solid $bluePrimary;
+                font-size: 1.6rem;
+            }
+
+            input {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 20px;
+                margin-right: 10px;
+                border: 1px solid $bluePrimary;
+            }
+
+            a {
+                @include button();
+                font-size: 20px;
+                margin: 30px 0;
+                display: inline-block;
+                padding: 8px 30px;
+                transition: background 0.5s;
+
+                &:hover {
+                    background: $greyPrimary;
+                    color: $bluePrimary;
+                }
+            }
+
+            h3 {
+                color: $bluePrimary;
+            }
+        }
+    }
+}
+
+.relative__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10rem auto 5rem;
+    p {
+        cursor: pointer;
+    }
+}

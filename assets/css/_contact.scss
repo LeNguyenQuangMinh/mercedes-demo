@@ -1,0 +1,178 @@
+.calendar {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bluePrimary;
+        color: #fff;
+        padding: 2rem 2rem;
+
+        i {
+            font-size: 3.2rem;
+            cursor: pointer;
+        }
+
+        .calendar__date {
+            text-align: center;
+            h1 {
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__body {
+        padding: 0 2rem;
+    }
+
+    &__weekdays {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+
+        div {
+            font-size: 2rem;
+        }
+    }
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+
+        div {
+            font-size: 1.6rem;
+            margin: 0.3rem;
+            border: 1px solid transparent;
+            padding: 1rem 0;
+            &:hover:not(.today) {
+                cursor: pointer;
+                border: 1px solid $bluePrimary;
+                background-color: #f8f8f8;
+            }
+        }
+
+        .prev-day,
+        .next-day {
+            opacity: 0.5;
+        }
+
+        .today {
+            background-color: $bluePrimary;
+            color: #fff;
+        }
+    }
+}
+
+.contact {
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: calc(100vh - 156px);
+        padding: 2rem;
+        overflow: hidden;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 100rem;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 1000;
+        flex-direction: row;
+        &.booking {
+            padding: 2rem 4rem;
+        }
+
+        &.contact {
+            background: $greyPrimary;
+            position: relative;
+            padding: 2rem 4rem;
+        }
+    }
+
+    &-form {
+        &__title {
+            font-size: 2.4rem;
+            text-align: center;
+            color: $bluePrimary;
+            margin-bottom: 1rem;
+        }
+
+        &__wrap {
+            position: relative;
+            label {
+                position: absolute;
+                left: 5%;
+                top: 30%;
+                z-index: 100;
+                color: #555;
+                transition: 0.5s;
+            }
+
+            &.active {
+                label {
+                    position: absolute;
+                    font-size: 1.4rem;
+                    padding: 0 8px;
+                    top: 0px;
+                    left: 5%;
+                    background-color: $greyPrimary;
+                }
+            }
+
+            &#textarea {
+                textarea {
+                    height: 10rem;
+                    overflow-y: auto;
+                    background: none;
+                    border: 2px solid $bluePrimary;
+                }
+
+                label {
+                    top: 16%;
+                }
+
+                &.active {
+                    label {
+                        position: absolute;
+                        font-size: 1.4rem;
+                        padding: 0 8px;
+                        top: 0px;
+                        left: 5%;
+                        background-color: $greyPrimary;
+                        color: $bluePrimary;
+                    }
+                }
+            }
+        }
+
+        &__input {
+            width: 100%;
+            margin: 1.2rem 0;
+            padding: 1.2rem;
+            font-size: 1.6rem;
+            border-radius: 1rem;
+            outline: none;
+            background: none;
+            border: 2px solid $bluePrimary;
+        }
+
+        &__sendBtn {
+            @include button();
+            font-size: 1.6rem;
+            border-radius: 0;
+            font-weight: 600;
+            width: 100%;
+            border: 4px solid $bluePrimary;
+            transition: 0.3s;
+        }
+    }
+}

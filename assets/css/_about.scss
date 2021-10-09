@@ -1,0 +1,280 @@
+.about-page {
+    background: linear-gradient(to bottom, $bluePrimary, $blackColor);
+
+    #to-top-btn {
+        background-color: $greyPrimary;
+        color: $bluePrimary;
+    }
+}
+
+.about {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+
+    &__header {
+        position: relative;
+        padding-top: calc(100% / 3);
+        width: 100%;
+        background: url("/assets/img/about-header.jpeg") center / cover
+            no-repeat;
+    }
+
+    &-header__text {
+        position: absolute;
+        left: 15%;
+        top: 20%;
+
+        h3 {
+            color: #333;
+            font-size: 3.2rem;
+            font-weight: 400;
+            margin-bottom: $mg12;
+        }
+
+        span {
+            color: #333;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+
+    &-body {
+        &__heading {
+            color: $whiteColor;
+            margin: 78px auto 56px;
+
+            &-header {
+                font-size: 1.5rem;
+                font-weight: 500;
+                position: relative;
+            }
+
+            hr {
+                margin: 15px 0px;
+                width: 40px;
+            }
+
+            &-name {
+                color: $whiteColor;
+                font-size: 2.8rem;
+                line-height: 100%;
+                font-weight: 400;
+                padding: 10px 0;
+                margin-bottom: 16px;
+            }
+
+            &-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            &-desc {
+                font-size: 1.3rem;
+            }
+        }
+
+        &-navigation {
+            &__list {
+                display: flex;
+            }
+
+            &__item {
+                background-color: #3c3c3c;
+                padding: 8px 12px;
+            }
+
+            &__item.active {
+                background-color: #2a2a2a;
+
+                a {
+                    color: #00adef;
+                }
+            }
+
+            &__item + &__item {
+                border-left: 1px solid $blackColor;
+                cursor: pointer;
+            }
+
+            &__link {
+                color: $whiteColor;
+                line-height: 1.6rem;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+
+        &__wrap-blogs {
+            display: flex;
+        }
+
+        &__blog.row {
+            margin: 34px 0 4rem;
+            display: none;
+
+            &.active,
+            &#main-page {
+                display: flex;
+            }
+
+            &-left.l-6 {
+                flex: 0 0 41.666%;
+                max-width: 41.6666%;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            &-right.l-6 {
+                flex: 0 0 58.3333%;
+                max-width: 58.3333%;
+
+                h2 {
+                    color: $whiteColor;
+                    font-size: 1.8rem;
+                    font-weight: normal;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    color: $whiteColor;
+                }
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__textelement {
+            margin-top: 32px;
+            color: $whiteColor;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+
+        &__footnote {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            margin-top: 4rem;
+        }
+
+        &__history {
+            cursor: pointer;
+            padding-top: 25%;
+            position: relative;
+            &--wrap {
+                position: absolute;
+                top: 2rem;
+                left: 4rem;
+            }
+
+            &-title {
+                color: $whiteColor;
+                font-size: 4rem;
+                font-weight: 400;
+            }
+
+            &-desc {
+                color: $whiteColor;
+                margin-left: 7rem;
+                display: flex;
+                align-items: center;
+            }
+
+            &-icon {
+                font-size: 3rem;
+                margin-left: 12px;
+            }
+        }
+
+        &__history + &__history {
+            border-top: 4px solid $blackColor;
+        }
+
+        &__history.first {
+            background: url(/assets/img/about-history1.webp) center / cover
+                no-repeat;
+        }
+        &__history.second {
+            background: url(/assets/img/about-history2.webp) center / cover
+                no-repeat;
+
+            .about-body__history--wrap {
+                left: 20rem;
+            }
+        }
+        &__history.third {
+            background: url(/assets/img/about-history3.webp) center / cover
+                no-repeat;
+        }
+
+        &__slider {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-bottom: 8rem;
+            &--wrap.row {
+                width: 100%;
+                display: none;
+
+                &.active {
+                    display: flex;
+                }
+
+                &.one {
+                    transition: transform 1s;
+                    animation: toLeft linear 0.5s;
+                }
+
+                &.two {
+                    transition: transform 1s;
+                    animation: toRight linear 0.5s;
+                }
+            }
+
+            &-icon {
+                color: $greyPrimary;
+                cursor: pointer;
+                font-size: 4rem;
+                position: absolute;
+                top: 30%;
+                transform: translateY(-50%);
+
+                &.disable {
+                    cursor: default;
+                    opacity: 0.4;
+                }
+
+                &.left {
+                    left: -30px;
+                }
+
+                &.right {
+                    right: -15px;
+                }
+            }
+        }
+
+        &__slide {
+            &-title {
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                color: $whiteColor;
+                display: -webkit-box;
+                display: block;
+                font-size: 1.5rem;
+                height: 4rem;
+                line-height: 2rem;
+                margin: 20px 0;
+                overflow: hidden;
+            }
+
+            &-link {
+                color: $whiteColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.products__show-list {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 150px;
+    margin-bottom: -150px;
+}
+
+.products__list.products {
+    display: flex;
+    width: 500%;
+
+    &.active {
+        display: block;
+        width: 500%;
+    }
+}
+
+.products {
+    &__item {
+        width: 20%;
+        display: none;
+
+        &.active {
+            display: block;
+            margin-left: 0%;
+            animation: slideLeft 0.5s linear;
+        }
+    }
+}
+
+.product__information--wrap {
+    margin-bottom: 8rem;
+}

@@ -1,0 +1,31 @@
+:root {
+    --text-color: #555;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--white-color);
+    border-radius: 30px;
+    font-size: 1.4rem;
+    padding: 12px 28px;
+    border: none;
+    text-decoration: none;
+    background-color: #2c3e50;
+}

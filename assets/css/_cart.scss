@@ -1,0 +1,100 @@
+.cart {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5rem;
+
+        .table {
+            &__header {
+                background-color: $bluePrimary;
+                color: $whiteColor;
+
+                th:nth-child(1) {
+                    text-align: left;
+                }
+
+                th {
+                    padding: 0.8rem 1.6rem;
+                    font-weight: normal;
+                    font-size: 1.8rem;
+                    text-align: right;
+                }
+            }
+
+            &__product-wrap {
+                td {
+                    padding: 1.6rem;
+                }
+            }
+
+            &__quantity {
+                border: 1px solid $bluePrimary;
+                padding: 0.8rem 0;
+                width: 4rem;
+                border-radius: 4px;
+                float: right;
+            }
+
+            &__price {
+                float: right;
+                color: $bluePrimary;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+
+        img {
+            width: 10rem;
+            margin-right: 1rem;
+        }
+
+        a {
+            color: red;
+            font-size: 1.4rem;
+        }
+
+        &-text {
+            h3 {
+                font-size: 1.6rem;
+                font-weight: normal;
+                margin-bottom: 6px;
+                color: $bluePrimary;
+            }
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 1.6rem;
+
+        table {
+            width: 100%;
+            max-width: 320px;
+            border-top: 4px solid $bluePrimary;
+            text-align: right;
+
+            tr {
+                margin: 2.8rem 0;
+                display: flex;
+                justify-content: space-between;
+                color: $bluePrimary;
+                font-weight: 500;
+            }
+            a#buyBtn {
+                @include button();
+                border-radius: 0;
+                width: 320px;
+                text-align: center;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

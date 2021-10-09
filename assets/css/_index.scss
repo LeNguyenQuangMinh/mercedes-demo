@@ -1,0 +1,826 @@
+.main {
+    position: relative;
+}
+
+// ===================TO TOP=========================
+#to-top-btn {
+    position: fixed;
+    right: 2%;
+    bottom: 20%;
+    padding: 5px 5px 0px;
+    font-size: 3.6rem;
+    background-color: $bluePrimary;
+    color: $whiteColor;
+    display: none;
+
+    &.show-btn {
+        display: block;
+    }
+}
+
+// ====================HEADER=========================
+.header {
+    width: 100%;
+    background: $bgHeaderGradient;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    &__wrap {
+        flex: 1;
+    }
+
+    &-nav {
+        &__logo-img {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        &__list {
+            z-index: 2;
+            display: flex;
+            flex: 1;
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__item a {
+            text-decoration: none;
+            font-size: $normalFontSize;
+            color: $whiteColor;
+            opacity: 0.6;
+            margin-right: $mg40;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: $nomalFontWeight;
+            float: right;
+        }
+
+        &__item a::after {
+            content: "";
+            height: 4px;
+            width: 0;
+            background-color: $whiteColor;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            border-radius: 2px;
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+        &__item a:hover,
+        &__icon:hover {
+            opacity: 1;
+        }
+
+        &__item a:hover:after {
+            width: 100%;
+        }
+
+        &__icon {
+            color: $whiteColor;
+            opacity: 0.6;
+            font-size: 2.8rem;
+            cursor: pointer;
+        }
+
+        // For mobile
+        &__icon.bar-mobile {
+            display: none;
+        }
+    }
+
+    &__about {
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &-about {
+        &__wrap-text {
+            width: 100%;
+        }
+
+        &__heading {
+            font-size: 5rem;
+            line-height: 6rem;
+            margin: 25px 0;
+        }
+
+        &__text {
+            font-size: 1.4rem;
+            color: $whiteColor;
+            line-height: 2.4rem;
+        }
+
+        &__view-btn {
+            margin: 30px 0;
+            transition: transform 0.5s;
+            @include button();
+
+            &:hover {
+                background-color: $greyPrimary;
+                color: $blackColor;
+                transform: translateX(12px);
+            }
+        }
+
+        // =======================SLIDER=================================
+        &__slideshow {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+        }
+
+        &__wrap-slide {
+            width: 500%;
+            height: 100%;
+            display: flex;
+
+            input {
+                display: none;
+            }
+        }
+
+        &-slideshow {
+            &__info {
+                width: 20%;
+                height: 100%;
+                transition: 2s;
+
+                &__link {
+                    text-decoration: none;
+                }
+            }
+
+            &__img {
+                width: 100%;
+            }
+        }
+
+        &-color {
+            &__navigation {
+                position: absolute;
+                width: 100%;
+                bottom: 3.2rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            &-navigation__btn {
+                border: 1px solid #bdc3c7;
+                width: 50px;
+                height: 8px;
+                margin: 0 4px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+        }
+
+        &__navigation {
+            position: absolute;
+            width: 100%;
+            margin-top: -$mg40;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-navigation__btn {
+            border: 1px solid #bdc3c7;
+            width: 50px;
+            height: 8px;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: $greyPrimary;
+            }
+        }
+    }
+}
+
+// ======================For sliders=========================
+#radio1:checked ~ .first {
+    margin-left: -0%;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+#radio1:checked ~ .header-about-color__navigation #btn1,
+#radio2:checked ~ .header-about-color__navigation #btn2,
+#radio3:checked ~ .header-about-color__navigation #btn3,
+#radio4:checked ~ .header-about-color__navigation #btn4,
+#radio5:checked ~ .header-about-color__navigation #btn5 {
+    background-color: $greyPrimary;
+}
+
+// =======================================NAV TYPE=====================
+
+.nav-type {
+    &__container {
+        min-width: 50%;
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    &__text {
+        color: $textColor;
+        font-size: 3.6rem;
+        margin: $mg30 0;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    &__list.sticky {
+        position: fixed;
+        top: 12px;
+        animation: showDown 0.5s linear forwards;
+        background-color: $whiteColor;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        height: 5.5rem;
+        position: relative;
+
+        &:hover {
+            background-color: #f6f6f6;
+        }
+    }
+
+    &__menu-btn {
+        display: none;
+        position: absolute;
+        right: -55px;
+        width: 55px;
+        height: 55px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background-color: $greyPrimary;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__item.check {
+        background-color: $greyPrimary;
+        color: $blackColor;
+        line-height: 2rem;
+        max-width: 100%;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: $blackColor;
+        padding: 20px;
+    }
+
+    &__link.mercedes-eq {
+        padding: 16px 8px 10px;
+    }
+
+    &__link.mercedes-amg,
+    &__link.mercedes-maybach {
+        padding: 19px 16px;
+        margin-right: -$mg24;
+    }
+
+    &__icon {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        color: #2c3e50;
+        margin-left: $mg04;
+    }
+}
+
+// For svg brands
+
+.vmos_X7hwh {
+    width: 80%;
+    margin-right: -170px;
+}
+.vmos_3_wtU {
+    width: 80%;
+    margin-right: -170px;
+    line-height: 5.5rem;
+}
+.vmos_XyRP- {
+    width: 100%;
+    margin-right: -170px;
+}
+
+// ======================================PRODUCTS======================
+.product {
+    &__heading {
+        color: #555;
+        font-size: 3.6rem;
+        line-height: 4rem;
+        text-align: center;
+        position: relative;
+        z-index: -1;
+        margin: 90px auto 60px;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 4px;
+            background-color: #333;
+            border-radius: 4px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -12px;
+        }
+    }
+    &__info {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #f8f8f8;
+            transform: translateY(-20px);
+
+            .navbar-contact__fetured {
+                display: block;
+            }
+        }
+
+        &--wrap-img {
+            width: 100%;
+            min-height: 216px;
+        }
+    }
+
+    &-info {
+        &__img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.8rem;
+        height: 3.6rem;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    &__price {
+        color: red;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    // =================================Lastest product===================
+
+    &__information {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f8f8f8;
+
+            .navbar-contact {
+                display: block;
+            }
+
+            .navbar-contact__fetured {
+                display: block;
+            }
+        }
+    }
+
+    &-information {
+        &__name {
+            line-height: 1.8rem;
+            height: 3.6rem;
+            text-align: center;
+            font-size: 2rem;
+            margin: 12px 0;
+            color: $blackColor;
+            overflow: hidden;
+            display: block;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        &__price {
+            color: $textColor;
+            font-size: 1.6rem;
+        }
+
+        &__img {
+            margin: $mg30 0 $mg60;
+            width: 100%;
+        }
+    }
+}
+
+// ==============================NAV BAR CONTACT===================
+.navbar {
+    &-contact {
+        position: absolute;
+        z-index: 1;
+        width: 80%;
+        background-color: #fafafa;
+        left: 10%;
+        bottom: -40%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        animation: showDown 0.5s linear;
+        display: none;
+
+        &__fetured {
+            position: absolute;
+            z-index: 1;
+            width: 92%;
+            background-color: #fafafa;
+            left: 4%;
+            bottom: -50%;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            animation: showDown 0.5s linear;
+            display: none;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+
+            .nav-bar__item {
+                padding: 8px 16px;
+            }
+
+            .nav-bar__icon {
+                margin-right: 4px;
+            }
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.nav-bar {
+    &__item {
+        font-size: 1.4rem;
+        line-height: 2;
+        padding: 8px 32px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+        &:hover {
+            background-color: #ccc8c8;
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $textColor;
+    }
+
+    &__icon {
+        min-width: 25px;
+        font-size: 1.8rem;
+        margin-right: 12px;
+        cursor: pointer;
+        color: $textColor;
+    }
+}
+
+.featured-products .product__information {
+    padding-bottom: 40px;
+}
+
+.featured-products .nav-bar__icon {
+    width: 96%;
+    left: 2%;
+}
+
+// ===============================OFFER=======================
+.offer {
+    background: $bgOfferGradient;
+    margin-top: 80px;
+
+    &__info {
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__img {
+        padding: 50px;
+    }
+
+    &__heading {
+        color: $textColor;
+        font-size: 1.8rem;
+    }
+
+    &__name {
+        font-size: 3.6rem;
+        line-height: 4rem;
+        margin: 25px 0;
+    }
+
+    &__desc {
+        color: $textColor;
+        font-size: 1.4rem;
+    }
+
+    &__buy {
+        @include button();
+        margin-top: 30px;
+        font-size: 1.5rem;
+        padding: 12px 36px;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #b7bdc2;
+            color: $blackColor;
+            transform: translateX(12px);
+        }
+    }
+}
+
+// =============================TESTIMONIAL====================
+
+.testimonial {
+    &__wrap {
+        width: 90%;
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+        margin-top: 100px;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-bottom: 8rem;
+
+        &:hover {
+            transform: translateY(-12px);
+        }
+    }
+
+    &__quote-icon {
+        font-size: 3.4rem;
+        color: rgb(52, 69, 87);
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        color: $textColor;
+        margin: 12px 0;
+    }
+
+    &__rating-icon {
+        color: rgb(52, 69, 87);
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+
+    &__avt {
+        margin-top: 20px;
+        border-radius: 50%;
+        width: 50px;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font: weight 600;
+        color: $textColor;
+    }
+}
+
+// ======================FOOTER===========================
+
+.footer {
+    &__container#footerContainer {
+        background: linear-gradient(to right, #00093c, #2d0b00);
+        width: 100%;
+        border-top-left-radius: 330px;
+        padding: 60px 0 30px;
+        // margin-top: 80px;
+    }
+
+    &__info {
+        color: $whiteColor;
+        font-size: 1.4rem;
+        padding: 32px;
+        margin-left: 20px;
+    }
+
+    &__logo {
+        width: 50%;
+        cursor: pointer;
+    }
+
+    &__about {
+        color: $whiteColor;
+        font-size: 1.3rem;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $whiteColor;
+        margin-bottom: 40px;
+        position: relative;
+        width: fit-content;
+    }
+
+    &__moving {
+        width: 100%;
+        height: 4px;
+        background-color: #767676;
+        border-radius: 4px;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        overflow: hidden;
+    }
+
+    &__heading span {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 4px;
+        width: 25%;
+        background-color: #fff;
+        border-radius: 4px;
+        animation: moving 2s linear infinite;
+    }
+
+    &__company {
+        font-size: 1.6rem;
+    }
+
+    &__email,
+    &__email-phone {
+        text-decoration: underline;
+        cursor: pointer;
+        margin: $mg08 0;
+    }
+
+    &__menu {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    &__wrap {
+        display: flex;
+        margin-left: 0;
+    }
+
+    &__wrap .col:nth-child(1),
+    &__wrap .col:nth-child(4) {
+        flex-basis: 35%;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    &__wrap .col:nth-child(2),
+    &__wrap .col:nth-child(3) {
+        flex-basis: 15%;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__link {
+        color: $whiteColor;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding-top: 8px;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: " ";
+            height: 2px;
+            width: 0;
+            background-color: $whiteColor;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        border-bottom: solid 1px $whiteColor;
+        padding-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__email-icon {
+        color: $whiteColor;
+        font-size: 2rem;
+        margin-right: 8px;
+    }
+
+    &__input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $whiteColor;
+        flex: 1;
+    }
+
+    &__social {
+        margin-top: 30px;
+    }
+
+    &-social__icon {
+        font-size: 2.2rem;
+        width: 40px;
+        height: 40px;
+        background-color: $whiteColor;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 8px;
+        cursor: pointer;
+        transition: 0.5s;
+        color: $blackColor;
+    }
+
+    &-social__icon:hover {
+        transform: translateY(-8px);
+        color: $whiteColor;
+        background-color: $blackColor;
+    }
+
+    &__Copyright {
+        color: $whiteColor;
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.btn--send-email {
+    background: transparent;
+    color: $whiteColor;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+}

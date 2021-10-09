@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <link rel="stylesheet" href="assets/css/grid.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+        <link
+            rel="shortcut icon"
+            href="https://assets.oneweb.mercedes-benz.com/global/1.12.0/favicon/favicon.ico?v=tfC62RUetn"
+        />
+        <title>Mercedes - Benz</title>
+    </head>
+    <body class="dark">
+        <div class="app">
+            <!-- -----------------HEADER----------------- -->
+            <header class="header" id="myheader">
+                <div class="grid wide">
+                    <div class="header__nav">
+                        <div class="header-nav__logo">
+                            <a href="index.html">
+                                <img
+                                    src="/assets/img/logo.png"
+                                    alt=""
+                                    class="header-nav__logo-img"
+                                />
+                            </a>
+                        </div>
+                        <div class="header__wrap">
+                            <ul class="header-nav__list" id="js-menuItems">
+                                <li class="header-nav__item">
+                                    <a
+                                        class="header-nav__link"
+                                        href="index.html"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="header-nav__item">
+                                    <a
+                                        class="header-nav__link"
+                                        href="products.html"
+                                        >Products</a
+                                    >
+                                </li>
+                                <li class="header-nav__item">
+                                    <a
+                                        class="header-nav__link"
+                                        href="about.html"
+                                        >About</a
+                                    >
+                                </li>
+                                <li class="header-nav__item">
+                                    <a
+                                        class="header-nav__link"
+                                        href="contact.html"
+                                        >Contact</a
+                                    >
+                                </li>
+                                <li class="header-nav__item">
+                                    <a
+                                        class="header-nav__link"
+                                        href="account.html"
+                                        >Account</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="cart.html">
+                            <i
+                                class="
+                                    header-nav__icon
+                                    cart-mobile
+                                    fas
+                                    fa-shopping-cart
+                                "
+                            ></i>
+                        </a>
+                        <i
+                            class="header-nav__icon bar-mobile fas fa-bars"
+                            id="toggleMenu"
+                        ></i>
+                    </div>
+
+                    <div class="row header__about"></div>
+                </div>
+            </header>
+            <!-- -----------------MAIN----------------- -->
+            <div class="main contact grid">
+                <div class="contain grid wide">
+                    <!-- ------------Contact--------------- -->
+                    <div class="contact__container">
+                        <div class="row contact__form">
+                            <div
+                                class="col l-6 m-12 c-12 contact__form booking"
+                            >
+                                <h3 class="contact-form__title">
+                                    Booking For Test Drive
+                                </h3>
+
+                                <!-- -------Calendar------------- -->
+                                <div class="calendar">
+                                    <div class="calendar__header">
+                                        <i class="fas fa-angle-left prev"></i>
+                                        <div class="calendar__date">
+                                            <h1></h1>
+                                            <p></p>
+                                        </div>
+                                        <i class="fas fa-angle-right next"></i>
+                                    </div>
+                                    <div class="calendar__body">
+                                        <div class="calendar__weekdays">
+                                            <div>Sun</div>
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                        </div>
+
+                                        <div class="calendar__days"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col l-6 m-12 c-12 contact__form contact"
+                            >
+                                <h3 class="contact-form__title">Contact us</h3>
+
+                                <form>
+                                    <div class="contact-form__wrap">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            class="contact-form__input"
+                                        />
+
+                                        <label for="">Username</label>
+                                    </div>
+                                    <div class="contact-form__wrap">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            class="contact-form__input"
+                                        />
+
+                                        <label for="">Email</label>
+                                    </div>
+                                    <div class="contact-form__wrap">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            class="contact-form__input"
+                                        />
+
+                                        <label for="">Phone</label>
+                                    </div>
+                                    <div
+                                        class="contact-form__wrap"
+                                        id="textarea"
+                                    >
+                                        <textarea
+                                            name="message"
+                                            class="contact-form__input"
+                                        ></textarea>
+
+                                        <label for="">Message</label>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        class="contact-form__sendBtn"
+                                    >
+                                        Send
+                                        <i class="far fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -----------------FOOTER----------------- -->
+            <footer class="footer grid footer__container" id="footerContainer">
+                <div class="grid wide">
+                    <div class="row footer__wrap">
+                        <div class="col l-3 m-6 footer__info">
+                            <a href="index.html">
+                                <img
+                                    src="/assets/img/logo.png"
+                                    alt=""
+                                    class="footer__logo"
+                                />
+                            </a>
+                            <p class="footer-text">
+                                Since our foundation in 1995, we have been a key
+                                player in the local automotive industry,
+                                especially in the luxury segment. To date, we
+                                are still the only European luxury car brand to
+                                have local productions.
+                            </p>
+                        </div>
+                        <div class="col l-3 m-6 footer__about">
+                            <h3 class="footer__heading">
+                                <div class="footer__moving">
+                                    <span></span>
+                                </div>
+                                Offices
+                            </h3>
+                            <p class="footer__company">Mercedes</p>
+                            <p class="footer__address">
+                                123, BinhDuong HighWay, Thuan An, Binh Duong
+                            </p>
+                            <p class="footer__email">quangminh2169@gmail.com</p>
+                            <h4 class="footer__email-phone">(+84) 583388739</h4>
+                        </div>
+                        <div class="col l-3 m-6 footer__menu">
+                            <h3 class="footer__heading">
+                                <div class="footer__moving">
+                                    <span></span>
+                                </div>
+                                Links
+                            </h3>
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Home </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link"
+                                        >About us
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">
+                                        Fetures
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l-3 m-6">
+                            <h3 class="footer__heading">
+                                <div class="footer__moving">
+                                    <span></span>
+                                </div>
+                                Newletters
+                            </h3>
+                            <form action="" class="footer__form">
+                                <i
+                                    class="footer__email-icon far fa-envelope"
+                                ></i>
+                                <input
+                                    type="email"
+                                    class="footer__input"
+                                    placeholder="Enter your Email"
+                                    required
+                                />
+                                <button class="btn--send-email">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </form>
+
+                            <div class="footer__social">
+                                <a
+                                    target="_blank"
+                                    href="https://www.facebook.com/lnquangminh/"
+                                >
+                                    <i
+                                        class="
+                                            footer-social__icon
+                                            fab
+                                            fa-facebook-f
+                                        "
+                                    ></i>
+                                </a>
+                                <i
+                                    class="footer-social__icon fab fa-twitter"
+                                ></i>
+                                <i
+                                    class="footer-social__icon fab fa-tiktok"
+                                ></i>
+                                <i
+                                    class="footer-social__icon fab fa-youtube"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <p class="footer__Copyright">
+                        Copyright © 2021 - Quang Minh
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script src="reveal.js"></script>
+        <script src="calendar.js"></script>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
