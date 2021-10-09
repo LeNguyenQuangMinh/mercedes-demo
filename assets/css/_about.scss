@@ -16,7 +16,7 @@
         position: relative;
         padding-top: calc(100% / 3);
         width: 100%;
-        background: url("/assets/img/about-header.jpeg") center / cover
+        background: url("./assets/img/about-header.jpeg") center / cover
             no-repeat;
     }
 
@@ -195,11 +195,11 @@
         }
 
         &__history.first {
-            background: url(/assets/img/about-history1.webp) center / cover
+            background: url(./assets/img/about-history1.webp) center / cover
                 no-repeat;
         }
         &__history.second {
-            background: url(/assets/img/about-history2.webp) center / cover
+            background: url(./assets/img/about-history2.webp) center / cover
                 no-repeat;
 
             .about-body__history--wrap {
@@ -207,7 +207,7 @@
             }
         }
         &__history.third {
-            background: url(/assets/img/about-history3.webp) center / cover
+            background: url(./assets/img/about-history3.webp) center / cover
                 no-repeat;
         }
 
