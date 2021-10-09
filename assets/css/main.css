@@ -5,6 +5,7 @@
           box-sizing: inherit;
 }
 
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -53,6 +54,10 @@ img {
 
 hr {
   margin: 20px 0;
+}
+
+.app {
+   overflow: hidden;
 }
 
 @-webkit-keyframes showDown {
