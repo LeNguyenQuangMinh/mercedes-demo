@@ -4,6 +4,10 @@
     box-sizing: inherit;
 }
 
+.app {
+        overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
